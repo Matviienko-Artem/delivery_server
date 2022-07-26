@@ -31,6 +31,8 @@ router.get("/all", async (req, res) => {
   try {
     await orderSchema.find().then((data) => res.json({ message: "All orders", data }));
   } catch (error) {
+    console.log("error");
+
     console.log(error);
 
     res.send({ message: "Server error", error });
