@@ -25,6 +25,7 @@ router.get("/all", async (req, res) => {
     await shopSchema.find().then((data) => res.json({ message: "All shops", data }));
   } catch (error) {
     console.log(error);
+
     res.send({ message: "Server error", error });
   }
 });
